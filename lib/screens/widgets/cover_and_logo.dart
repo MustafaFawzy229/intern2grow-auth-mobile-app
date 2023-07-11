@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CoverAndLogo extends StatelessWidget {
-  const CoverAndLogo({super.key});
+  const CoverAndLogo({super.key, required this.logo});
 
+  final String logo;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -25,8 +26,8 @@ class CoverAndLogo extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                image: const DecorationImage(
-                  image: AssetImage('assets/images/logo.png'),
+                image: DecorationImage(
+                  image: AssetImage(logo),
                 ),
               ),
               width: 116,

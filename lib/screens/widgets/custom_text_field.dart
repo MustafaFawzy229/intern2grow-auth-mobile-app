@@ -3,14 +3,11 @@ import 'package:internship_auth_mobile_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {super.key,
-      required this.category,
-      required this.hint,
-      required this.icon});
+      {super.key, required this.category, required this.hint, this.icon});
 
   final String category;
   final String hint;
-  final IconData icon;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {

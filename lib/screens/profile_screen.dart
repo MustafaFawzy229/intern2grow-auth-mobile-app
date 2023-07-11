@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:internship_auth_mobile_app/constants.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/cover_and_logo.dart';
+import 'package:internship_auth_mobile_app/screens/widgets/custom_button.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inputs.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inquery.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_text_field.dart';
 
-import 'widgets/custom_button.dart';
+import '../constants.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +20,13 @@ class LoginScreen extends StatelessWidget {
         child: const Column(
           children: [
             CoverAndLogo(
-              logo: kPrimaryLogo,
+              logo: 'assets/images/Profile.png',
             ),
             SizedBox(
               height: 22,
             ),
             Text(
-              'Log in to your account',
+              'Ahmed Saber',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: kPrimaryFont,
@@ -41,35 +41,27 @@ class LoginScreen extends StatelessWidget {
             CustomTextField(
               category: 'Username',
               hint: 'Enter Your Username',
-              icon: Icons.cancel_outlined,
             ),
             SizedBox(
               height: 22,
             ),
             CustomTextField(
-              category: 'Password',
+              category: 'Email',
               hint: 'Enter Your Passwprd',
-              icon: Icons.visibility_off_outlined,
             ),
             SizedBox(
               height: 22,
             ),
-            CustomFormInputs(
-              question: 'Forgot password?',
+            CustomTextField(
+              category: 'Gender',
+              hint: 'Male',
             ),
             SizedBox(
               height: 22,
             ),
             CustomButton(
-              label: 'Log in',
-              color: Color(0xff007BFF),
-            ),
-            SizedBox(
-              height: 22,
-            ),
-            CustomFormInquiry(
-              inquery: 'Don’t have an account?',
-              action: 'Register',
+              label: 'Log out',
+              color: Color(0xffDC3545),
             ),
           ],
         ),

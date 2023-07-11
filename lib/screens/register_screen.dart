@@ -20,7 +20,9 @@ class RegisterScreen extends StatelessWidget {
         child: const SingleChildScrollView(
           child: Column(
             children: [
-              CoverAndLogo(),
+              CoverAndLogo(
+                logo: kPrimaryLogo,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -69,6 +71,7 @@ class RegisterScreen extends StatelessWidget {
               ),
               CustomButton(
                 label: 'Register',
+                color: Color(0xff007BFF),
               ),
               SizedBox(
                 height: 20,
