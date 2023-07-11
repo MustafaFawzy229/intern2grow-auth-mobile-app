@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:internship_auth_mobile_app/screens/login_screen.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/cover_and_logo.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_button.dart';
-import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inputs.dart';
-import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inquery.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_text_field.dart';
 
 import '../constants.dart';
