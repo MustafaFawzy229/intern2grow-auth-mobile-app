@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:internship_auth_mobile_app/constants.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/cover_and_logo.dart';
+import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inputs.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -22,7 +24,7 @@ class LoginScreen extends StatelessWidget {
               'Log in to your account',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: 'Inter',
+                fontFamily: kPrimaryFont,
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
                 color: Color(0xff2A2B2E),
@@ -43,7 +45,11 @@ class LoginScreen extends StatelessWidget {
               category: 'Password',
               hint: 'Enter Your Passwprd',
               icon: Icons.visibility_off_outlined,
-            )
+            ),
+            SizedBox(
+              height: 22,
+            ),
+            CustomFormInputs(),
           ],
         ),
       ),

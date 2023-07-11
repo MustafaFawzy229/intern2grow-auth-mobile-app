@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship_auth_mobile_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
@@ -20,7 +21,7 @@ class CustomTextField extends StatelessWidget {
           Text(
             category,
             style: const TextStyle(
-              fontFamily: 'Inter',
+              fontFamily: kPrimaryFont,
               fontSize: 14,
               fontWeight: FontWeight.w400,
               color: Color(0xff808194),
