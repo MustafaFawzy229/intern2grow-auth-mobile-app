@@ -50,7 +50,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 22,
             ),
-            CustomTextField(
+            const CustomTextField(
               category: 'Password',
               hint: 'Enter Your Passwprd',
               icon: Icons.visibility_off_outlined,
