@@ -15,24 +15,35 @@ class LoginScreen extends StatelessWidget {
         child: const Column(
           children: [
             CoverAndLogo(),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 12),
-              child: Text(
-                'Log in to your account',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Inter',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff2A2B2E),
-                ),
+            SizedBox(
+              height: 22,
+            ),
+            Text(
+              'Log in to your account',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: Color(0xff2A2B2E),
               ),
+            ),
+            SizedBox(
+              height: 22,
             ),
             CustomTextField(
               category: 'Username',
               hint: 'Enter Your Email',
-              icon: Icons.cancel,
+              icon: Icons.cancel_outlined,
             ),
+            SizedBox(
+              height: 22,
+            ),
+            CustomTextField(
+              category: 'Password',
+              hint: 'Enter Your Passwprd',
+              icon: Icons.visibility_off_outlined,
+            )
           ],
         ),
       ),
