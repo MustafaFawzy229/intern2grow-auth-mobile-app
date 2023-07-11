@@ -14,7 +14,8 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -32,7 +33,7 @@ class CustomTextField extends StatelessWidget {
           ),
           SizedBox(
             height: 44,
-            width: 345,
+            width: double.infinity,
             child: TextField(
               decoration: InputDecoration(
                 hintText: hint,
