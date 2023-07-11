@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
             ),
             CustomTextField(
               category: 'Username',
-              hint: 'Enter Your Email',
+              hint: 'Enter Your Username',
               icon: Icons.cancel_outlined,
             ),
             SizedBox(
