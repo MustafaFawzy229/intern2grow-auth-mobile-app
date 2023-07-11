@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:internship_auth_mobile_app/screens/widgets/login_screen.dart';
+import 'package:internship_auth_mobile_app/screens/login_screen.dart';
 
 void main() {
   runApp(const AuthMobileApp());
