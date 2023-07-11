@@ -52,15 +52,22 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 22,
             ),
-            CustomFormInputs(),
+            CustomFormInputs(
+              question: 'Forgot password?',
+            ),
             SizedBox(
               height: 22,
             ),
-            CustomButton(),
+            CustomButton(
+              label: 'Log in',
+            ),
             SizedBox(
               height: 22,
             ),
-            CustomFormInquiry(),
+            CustomFormInquiry(
+              inquery: 'Don’t have an account?',
+              action: 'Register',
+            ),
           ],
         ),
       ),

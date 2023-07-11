@@ -3,29 +3,33 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 
 class CustomFormInquiry extends StatelessWidget {
-  const CustomFormInquiry({super.key});
+  const CustomFormInquiry(
+      {super.key, required this.inquery, required this.action});
+
+  final String inquery;
+  final String action;
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Row(
         children: [
           Text(
-            'Don’t have an account?',
-            style: TextStyle(
+            inquery,
+            style: const TextStyle(
               fontFamily: kPrimaryFont,
               fontSize: 14,
               fontWeight: FontWeight.w400,
               color: Color(0xff2A2B2E),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 6,
           ),
           Text(
-            'Register',
-            style: TextStyle(
+            action,
+            style: const TextStyle(
               fontFamily: kPrimaryFont,
               fontSize: 14,
               fontWeight: FontWeight.w700,

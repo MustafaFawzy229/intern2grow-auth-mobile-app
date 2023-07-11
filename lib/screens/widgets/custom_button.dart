@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  const CustomButton({super.key, required this.label});
+
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,10 @@ class CustomButton extends StatelessWidget {
               Radius.circular(4),
             ),
           ),
-          child: const Center(
+          child: Center(
             child: Text(
-              'Log in',
-              style: TextStyle(
+              label,
+              style: const TextStyle(
                 fontFamily: kPrimaryFont,
                 fontSize: 14,
                 fontWeight: FontWeight.w700,

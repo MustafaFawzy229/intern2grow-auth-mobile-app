@@ -3,16 +3,18 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 
 class CustomFormInputs extends StatelessWidget {
-  const CustomFormInputs({super.key});
+  const CustomFormInputs({super.key, required this.question});
+
+  final String question;
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
+          const Row(
             children: [
               Icon(
                 Icons.check_box_outline_blank,
@@ -34,8 +36,8 @@ class CustomFormInputs extends StatelessWidget {
             ],
           ),
           Text(
-            'Forgot password?',
-            style: TextStyle(
+            question,
+            style: const TextStyle(
               fontFamily: kPrimaryFont,
               fontSize: 14,
               fontWeight: FontWeight.w700,
