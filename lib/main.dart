@@ -13,9 +13,14 @@ class AuthMobileApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      routes: {
+        LoginScreen.id: (context) => const LoginScreen(),
+        RegisterScreen.id: (context) => const RegisterScreen(),
+        ProfileScreen.id: (context) => const ProfileScreen(),
+      },
+      initialRoute: LoginScreen.id,
       debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
     );
   }
 }

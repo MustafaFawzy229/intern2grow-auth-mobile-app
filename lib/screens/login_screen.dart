@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:internship_auth_mobile_app/constants.dart';
+import 'package:internship_auth_mobile_app/screens/profile_screen.dart';
+import 'package:internship_auth_mobile_app/screens/register_screen.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/cover_and_logo.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inputs.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inquery.dart';
@@ -10,6 +12,8 @@ import 'widgets/custom_button.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
+  static String id = 'LoginScreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,15 +21,15 @@ class LoginScreen extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
         ),
-        child: const Column(
+        child: Column(
           children: [
-            CoverAndLogo(
+            const CoverAndLogo(
               logo: kPrimaryLogo,
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            Text(
+            const Text(
               'Log in to your account',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -35,15 +39,15 @@ class LoginScreen extends StatelessWidget {
                 color: Color(0xff2A2B2E),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            CustomTextField(
+            const CustomTextField(
               category: 'Username',
               hint: 'Enter Your Username',
               icon: Icons.cancel_outlined,
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
             CustomTextField(
@@ -51,25 +55,31 @@ class LoginScreen extends StatelessWidget {
               hint: 'Enter Your Passwprd',
               icon: Icons.visibility_off_outlined,
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            CustomFormInputs(
+            const CustomFormInputs(
               question: 'Forgot password?',
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
             CustomButton(
               label: 'Log in',
-              color: Color(0xff007BFF),
+              color: const Color(0xff007BFF),
+              onTap: () {
+                Navigator.pushNamed(context, ProfileScreen.id);
+              },
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
             CustomFormInquiry(
               inquery: 'Don’t have an account?',
               action: 'Register',
+              onTap: () {
+                Navigator.pushNamed(context, RegisterScreen.id);
+              },
             ),
           ],
         ),

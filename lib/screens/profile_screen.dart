@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship_auth_mobile_app/screens/login_screen.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/cover_and_logo.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_button.dart';
 import 'package:internship_auth_mobile_app/screens/widgets/custom_form_inputs.dart';
@@ -10,6 +11,8 @@ import '../constants.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
+  static String id = 'ProfileScreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,15 +20,15 @@ class ProfileScreen extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
         ),
-        child: const Column(
+        child: Column(
           children: [
-            CoverAndLogo(
+            const CoverAndLogo(
               logo: 'assets/images/Profile.png',
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            Text(
+            const Text(
               'Ahmed Saber',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -35,33 +38,36 @@ class ProfileScreen extends StatelessWidget {
                 color: Color(0xff2A2B2E),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            CustomTextField(
+            const CustomTextField(
               category: 'Username',
               hint: 'Enter Your Username',
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            CustomTextField(
+            const CustomTextField(
               category: 'Email',
               hint: 'Enter Your Passwprd',
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
-            CustomTextField(
+            const CustomTextField(
               category: 'Gender',
               hint: 'Male',
             ),
-            SizedBox(
+            const SizedBox(
               height: 22,
             ),
             CustomButton(
               label: 'Log out',
-              color: Color(0xffDC3545),
+              color: const Color(0xffDC3545),
+              onTap: () {
+                Navigator.pushNamed(context, LoginScreen.id);
+              },
             ),
           ],
         ),

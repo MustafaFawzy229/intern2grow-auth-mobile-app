@@ -4,10 +4,14 @@ import '../../constants.dart';
 
 class CustomFormInquiry extends StatelessWidget {
   const CustomFormInquiry(
-      {super.key, required this.inquery, required this.action});
+      {super.key,
+      required this.inquery,
+      required this.action,
+      required this.onTap});
 
   final String inquery;
   final String action;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +31,15 @@ class CustomFormInquiry extends StatelessWidget {
           const SizedBox(
             width: 6,
           ),
-          Text(
-            action,
-            style: const TextStyle(
-              fontFamily: kPrimaryFont,
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
+          GestureDetector(
+            onTap: onTap,
+            child: Text(
+              action,
+              style: const TextStyle(
+                fontFamily: kPrimaryFont,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
         ],
